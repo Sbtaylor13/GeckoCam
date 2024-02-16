@@ -6,7 +6,7 @@ This is a webpage containing a livestream of Lemon the Leopard Gecko
 (will be available here when the website is up)
 
 ## Features
-- **Live Video Feed:** GeckoCam is available 24/7 at 1080p quality
+- **Live Video Feed:** GeckoCam is available 24/7 under the GeckoCam tab on the home page
 - **Chat Interaction:** A chat is available for all users to talk and update each other on Lemon's whereabouts
 
 ## Feedback and Support
