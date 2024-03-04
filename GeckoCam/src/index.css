@@ -3,5 +3,10 @@
 @tailwind utilities;
 
 body {
-  background-color: #1F2937;
+  font-family: "Proxima Nova", system-ui, sans-serif;
+  background-color: #030303;
+}
+
+.container {
+  max-width: 70%;
 }

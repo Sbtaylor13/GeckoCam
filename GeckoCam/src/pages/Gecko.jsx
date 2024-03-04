@@ -1,7 +1,6 @@
 import React, { useRef, useEffect } from "react";
 import videojs from "video.js";
 import "video.js/dist/video-js.css";
-import video from "/test.mp4";
 
 const Gecko = () => {
   return (
@@ -15,10 +14,7 @@ const Gecko = () => {
       muted
       data-setup="{}"
     >
-      <source
-        src="http://10.0.0.189/hls/stream.m3u8"
-        type="application/x-mpegURL"
-      />
+      <source src="/stream/stream.m3u8" type="application/x-mpegURL" />
     </video>
   );
 };
