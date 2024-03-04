@@ -11,32 +11,29 @@ const Resume = () => {
       <h2>
         <strong className="text-5xl">Internships</strong>
       </h2>
-      <h2>Lavner Tech Camp - IT Intern</h2>
-      <p>
-        <em>May 2023 - Aug. 2023</em>
-      </p>
-      <ul>
-        <li>
-          Leveraged expertise in Javascript and Python to create unique coding
-          experiences for students in a summer tech camp
-        </li>
-        <li>
-          Assumed the role of camp director during a brief interval, overseeing
-          all operational aspects of camp
-        </li>
-      </ul>
+      <div className="flex justify-between">
+        <h2 className="inline justify-start">Lavner Tech Camp - IT Intern </h2>
+        <em className="inline justify-end">May 2023 - Aug. 2023</em>
+      </div>
 
-      <h2>Agile Care Enterprises - Business Development Intern</h2>
-      <p>
-        <em>Jan. 2023 - May 2023</em>
-      </p>
+      <ul classname="list-none">
+        <li classname="inline-block">▪ Leveraged expertise in Javascript and Python to create unique coding experiences for students in a summer tech camp</li>
+        <li classname="inline-block">▪ Assumed the role of camp director during a brief interval, overseeing all operational aspects of camp</li>
+      </ul>
+    
+      <br />
+      <div className="flex justify-between">
+        <h2 className="inline justify-start">Agile Care - Business Development Intern</h2>
+        <em className="inline justify-end">Jan. 2023 - May 2023</em>
+      </div>
+
       <ul>
         <li>
-          Learned proper Incident Response for companies to handle cyberattacks
+        ▪ Learned proper Incident Response for companies to handle cyberattacks
           and data breaches
         </li>
         <li>
-          Compacted and sorted text from a Cybersecurity contract using python
+        ▪ Compacted and sorted text from a Cybersecurity contract using python
           code I developed
         </li>
       </ul>
@@ -81,7 +78,7 @@ const Resume = () => {
       <p>
         Principles Of Operating Systems ▪ Data Structures ▪ Artificial
         Intelligence (AI) ▪ Software Engineering ▪ Computer Organization and
-        Assembly Language ⚪ Computer Systems Architecture ▪ Discrete Structures
+        Assembly Language ▪ Computer Systems Architecture ▪ Discrete Structures
         ▪ Calculus I-II ▪ Linear Algebra ▪ Statistics ▪ Data Visualization
       </p>
     </div>
