@@ -2,14 +2,14 @@ import React from "react";
 
 const Resume = () => {
   return (
-    <div className="container text-4xl">
-      <h2 className="text-5xl">
+    <div className="container text-2xl text-left">
+      <h2 className="text-4xl">
         <strong>Coding Languages</strong>
       </h2>
       <p>JavaScript | C++ | SQL | HTML | CSS | Python | Java | C</p>
       <br />
       <h2>
-        <strong className="text-5xl">Internships</strong>
+        <strong className="text-4xl">Internships</strong>
       </h2>
       <div className="flex justify-between">
         <h2 className="inline justify-start">Lavner Tech Camp - IT Intern </h2>
@@ -27,7 +27,7 @@ const Resume = () => {
         <em className="inline justify-end">Jan. 2023 - May 2023</em>
       </div>
 
-      <ul>
+      <ul >
         <li>
         ▪ Learned proper Incident Response for companies to handle cyberattacks
           and data breaches
@@ -39,27 +39,29 @@ const Resume = () => {
       </ul>
       <br />
       <h2>
-        <strong className="text-5xl">Projects</strong>
+        <strong className="text-4xl">Projects</strong>
       </h2>
       <ul>
         <li>
           <strong>GeckoCam:</strong> Independently developed a website for live
           streaming of my pet Leopard Gecko with use of a Raspberry Pi and my
-          skills in HTML, CSS, JavaScript, React, and SQL
+          skills in HTML, CSS, JavaScript, React, and SQL - <a href="https://github.com/Sbtaylor13/GeckoCam" className="text-green-600" target="_blank">GeckoCam Repo</a>
         </li>
         <li>
           <strong>Twitter Automation:</strong> Utilized Twitter's API to develop
           and manage a bot account programmed to automatically post sentences
-          from the DUNE book at hourly intervals
+          from the DUNE book at hourly intervals - <a href="https://github.com/Sbtaylor13/TwitterBot" className="text-green-600" target="_blank">Twitter Bot Repo</a>
         </li>
         <li>
           <strong>Cookie Clicker Website:</strong> Worked in a team as the front
           end developer of a cookie clicker clone, utilizing scrum workflow to
-          push updates to GitHub
+          push updates to GitHub - live at <a href="https://sbtaylor13.github.io/FarmTown/" className="text-green-600" target="_blank">sbtaylor13/FarmTown</a> -  
+          <a href="https://github.com/Sbtaylor13/FarmTown/" className="text-green-600" target="_blank"> Repo</a>
         </li>
+        
         <li>
           <strong>Server Management:</strong> Built a Network Attached Server
-          that hosts Minecraft using Docker.
+          that hosts Minecraft using Docker
         </li>
         <li>
           <strong>School Clubs:</strong> Was a member of the UMBC Game
@@ -73,7 +75,7 @@ const Resume = () => {
       </ul>
       <br />
       <h2>
-        <strong className="text-5xl">Relevant Courses</strong>
+        <strong className="text-4xl">Relevant Courses</strong>
       </h2>
       <p>
         Principles Of Operating Systems ▪ Data Structures ▪ Artificial
