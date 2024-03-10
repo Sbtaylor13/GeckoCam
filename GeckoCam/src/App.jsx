@@ -1,27 +1,23 @@
 import React from "react";
 import Navbar from "./components/navbar";
-import Gecko from "./pages/Gecko";
-import Home from "./pages/Home";
-import Resume from "./pages/Resume";
+import Gecko from "./Gecko";
+import Home from "./Home";
+import Resume from "./Resume";
+import Info from "./Info";
 
 const App = () => {
-  let Component;
-  switch (window.location.pathname) {
-    case "/":
-      Component = Home;
-      break;
-    case "/Resume":
-      Component = Resume;
-      break;
-    case "/Gecko":
-      Component = Gecko;
-      break;
-  }
   return (
     <>
-      <Navbar />
-      <div className="text-white text-center text-6xl p-3">
-        <Component />
+      <div className="bg-black font-[style] h-screen text-white text-center text-6xl p-3">
+        <div className="bg-[url('./assets/grey.png')] bg-no-repeat bg-cover w-screen h-screen -ml-4 -mt-4">
+          <Home />
+        </div>
+        <div id="info" className="w-screen -ml-4 -mt-4 h-3/5 bg-black">
+          <Info />
+        </div>
+        <div className="w-screen -ml-4 -mt-4 h-full">
+          <Resume />
+        </div>
       </div>
     </>
   );

@@ -1,5 +1,5 @@
 import React from "react";
-import STimage from "/src/icon.png";
+import STimage from "/src/assets/icon.png";
 
 const navbar = () => {
   return (
