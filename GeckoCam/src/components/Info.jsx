@@ -3,7 +3,7 @@ import { Separator } from "@/components/ui/separator";
 
 const Info = () => {
   return (
-    <div className="">
+    <div id="info" className="w-screen -ml-4 -mt-4 h-3/5 bg-black">
       <div className="pt-32 ml-[400px] max-w-sm text-left">
         <h1 className="text-2xl mb-2 font-bold">
           Name:{" "}
@@ -32,14 +32,12 @@ const Info = () => {
           Location:
           <h1 className="p-3 text-2xl mb-2 font-normal inline"> Maryland</h1>
         </h1>
-      </div>
-
-      <div className="flex justify-end mr-[200px]">
+        <br />
         <h1 className="text-current text-4xl font-bold mb-4">
           Coding Languages
         </h1>
-        <br />
-        <p className=" text-2xl mb-2">
+
+        <p className=" text-2xl mb-2 max-w-l">
           JavaScript | C++ | SQL | HTML | CSS | Python | Java | C
         </p>
       </div>
