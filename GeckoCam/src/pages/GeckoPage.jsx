@@ -6,9 +6,6 @@ const Gecko = () => {
   return (
     <>
       <h1 className="text-8xl text-center">GeckoCam</h1>
-      <h2 className="text-3xl text-center">
-        Say hello to <strong className="italic">Lemon</strong>
-      </h2>
       <body class="flex justify-center items-center h-screen -m-20">
         <video
           id="my-video"

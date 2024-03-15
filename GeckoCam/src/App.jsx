@@ -9,9 +9,10 @@ const App = () => {
   return (
     <>
       <div>
-        <Home />
+        <Gecko />
+        {/*<Home />
         <Info />
-        <Resume />
+        <Resume />*/}
       </div>
     </>
   );
