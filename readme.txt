@@ -3,7 +3,7 @@
 This is a webpage containing a livestream of Lemon the Leopard Gecko
 
 ## Live Stream Link
-(will be available here when the website is up)
+http://shanetaylor.info/
 
 ## Features
 - **Live Video Feed:** GeckoCam is available 24/7 under the GeckoCam tab on the home page
