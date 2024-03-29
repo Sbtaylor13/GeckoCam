@@ -11,9 +11,3 @@ http://shanetaylor.info/
 
 ## Feedback and Support
 If you have any feedback, questions, or encounter any issues while watching the live stream, please reach out to me at [sbtaylor789@gmail.com].
-
----
-
-**The entire process for creating GeckoCam will be documented in the link below**
-
-https://docs.google.com/document/d/1MYf-VHZJIkBcqxSjoJzD9o8iPBG7FZrBNf1Owoc9-wg/edit?usp=sharing
