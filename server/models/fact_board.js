@@ -14,7 +14,19 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: false,
         },
 
-    })
+    });
+
+    fact_board.associate = (models) => {
+        fact_board.hasMany(models.comments, {
+            onDelete: "cascade", 
+        })
+    }
+
+    fact_board.associate = (models) => {
+        fact_board.hasMany(models.likes, {
+            onDelete: "cascade", 
+        })
+    }
 
     return fact_board
 }

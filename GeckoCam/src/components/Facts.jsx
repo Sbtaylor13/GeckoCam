@@ -1,9 +1,11 @@
 import React from "react";
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function Facts() {
   const [listOfPosts, setListOfPosts] = useState([]);
+  let navigate = useNavigate();
 
   useEffect(() => {
     axios.get("http://localhost:3001/facts").then((response) => {
@@ -11,20 +13,52 @@ function Facts() {
     });
   }, []);
 
+  const likePost = (factBoardId) => {
+    axios
+      .post(
+        "http://localhost:3001/likes",
+        { factBoardId: factBoardId },
+        { headers: { accessToken: localStorage.getItem("accessToken") } }
+      )
+      .then((response) => {
+        history.go();
+      });
+  };
   return (
-    <div className=" w-full h-auto flex pw-10 ">
+    <div className=" w-full h-auto flex pw-10 flex-wrap">
       {listOfPosts.map((value, key) => {
         return (
-          <div className="flex w-64 h-32 rounded-lg flex-col mt-50 m-3 border border-solid border-black font-sans shadow-md cursor-pointer">
-            <div className="flex-1/5 border-b border-solid border-black bg-yellow-600 grid place-items-center ">
+          <div
+            key={key}
+            className="flex w-64 h-32 rounded-lg flex-col mt-50 m-3 border border-solid border-black font-sans shadow-md cursor-pointer"
+          >
+            <div
+              className="flex-1/5 border-b border-solid border-black bg-yellow-400 grid place-items-center "
+              onClick={() => navigate(`/fact/${value.id}`)}
+            >
               {value.title}
             </div>
-            <div className="h-3/5 grid bg-white place-items-center">
+            <div
+              className="h-3/5 grid bg-white place-items-center"
+              onClick={() => navigate(`/fact/${value.id}`)}
+            >
               {value.fact}
             </div>
-            <div className="flex-1/5 border-t border-solid border-black flex items-center pl-3 bg-yellow-600 ">
-              @{value.user_id}
+            <div
+              className="flex-1/5 border-t border-solid border-black items-center pl-3 bg-yellow-400 "
+              onClick={() => navigate(`/fact/${value.id}`)}
+            >
+              @{value.user_id}{" "}
+              <label className="float-right pr-3">🔺{value.likes.length}</label>
             </div>
+            <button
+              className="bg-red-800"
+              onClick={() => {
+                likePost(value.id);
+              }}
+            >
+              upvote
+            </button>
           </div>
         );
       })}
