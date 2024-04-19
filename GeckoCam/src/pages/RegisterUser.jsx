@@ -27,27 +27,27 @@ const RegisterUser = () => {
         onSubmit={onSubmit}
         validationSchema={validationSchema}
       >
-        <Form className="formContainer">
-          <label>Username: </label>
+        <Form className="w-screen h-screen bg-zinc-800 pt-10">
+          <label className="text-yellow-600 pl-8 pr-2">Username: </label>
           <ErrorMessage name="username" component="span" />
-          <Field
-            autoComplete="off"
-            id="inputCreatePost"
-            name="username"
-            placeholder="(Ex. John123...)"
-          />
+          <Field autoComplete="off" id="inputCreatePost" name="username" />
 
-          <label>Password: </label>
+          <label className="text-yellow-600 pl-8 pr-2">Password: </label>
           <ErrorMessage name="password" component="span" />
           <Field
             autoComplete="off"
             type="password"
             id="inputCreatePost"
             name="password"
-            placeholder="Your Password..."
           />
 
-          <button type="submit"> Register</button>
+          <button
+            type="submit"
+            className="ml-8 pl-5 pr-5 pt-2 pb-2 text-black bg-yellow-600"
+          >
+            {" "}
+            Register
+          </button>
         </Form>
       </Formik>
     </div>

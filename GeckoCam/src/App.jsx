@@ -10,22 +10,25 @@ const App = () => {
   return (
     <div>
       <Router>
-        <Link to="/createfact" className="p-5">
-          {" "}
-          Create Fact
-        </Link>
-        <Link to="/" className="p-5">
-          {" "}
-          Home
-        </Link>
-        <Link to="/login" className="p-5">
-          {" "}
-          Login
-        </Link>
-        <Link to="/register" className="p-5">
-          {" "}
-          Register
-        </Link>
+        <div className="bg-black">
+          <Link to="/createfact" className="p-5 text-3xl text-yellow-600">
+            {" "}
+            Create Fact
+          </Link>
+          <Link to="/" className="p-5 text-3xl text-yellow-600">
+            {" "}
+            Home
+          </Link>
+          <Link to="/login" className="p-5 text-3xl text-yellow-600">
+            {" "}
+            Login
+          </Link>
+          <Link to="/register" className="p-5 text-3xl text-yellow-600">
+            {" "}
+            Register
+          </Link>
+        </div>
+
         <Routes>
           <Route path="/" exact Component={Gecko} />
           <Route path="/createfact" exact Component={CreateFact} />

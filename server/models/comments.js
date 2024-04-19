@@ -1,7 +1,10 @@
 module.exports = (sequelize, DataTypes) => {
-    
     const comments = sequelize.define("comments", {
-        commentBody: {
+        commentText: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+        factBoardId: {
             type: DataTypes.STRING,
             allowNull: false,
         },
@@ -10,6 +13,5 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: false,
         },
     })
-
     return comments
 }

@@ -14,7 +14,7 @@ app.use(cors())
 
 const db = require('./models')
 
-//Routerss
+//Routers so front end can access api
 const factRouter = require('./routes/fact_board');
 app.use("/facts", factRouter);
 const commentsRouter = require('./routes/comments');
@@ -24,7 +24,7 @@ app.use("/auth", usersRouter);
 const likesRouter = require('./routes/likes');
 app.use("/likes", likesRouter);
 const chatRouter = require('./routes/chat');
-app.use("/chats", chatRouter);
+app.use("/chat", chatRouter);
 
 db.sequelize.sync().then(() =>{
     app.listen(3001, () => {

@@ -1,5 +1,4 @@
 module.exports = (sequelize, DataTypes) => {
-    
     const fact_board = sequelize.define("fact_board", {
         title: {
             type: DataTypes.STRING,
@@ -15,7 +14,6 @@ module.exports = (sequelize, DataTypes) => {
         },
 
     });
-
     fact_board.associate = (models) => {
         fact_board.hasMany(models.comments, {
             onDelete: "cascade", 
@@ -27,6 +25,5 @@ module.exports = (sequelize, DataTypes) => {
             onDelete: "cascade", 
         })
     }
-
     return fact_board
 }

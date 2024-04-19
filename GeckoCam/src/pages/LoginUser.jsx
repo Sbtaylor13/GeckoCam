@@ -18,23 +18,28 @@ const LoginUser = () => {
     });
   };
   return (
-    <div className="loginContainer">
-      <label>Username:</label>
+    <div className="w-screen h-screen bg-zinc-800 pt-10">
+      <label className="text-yellow-600 pl-8 pr-2">Username:</label>
       <input
         type="text"
         onChange={(event) => {
           setUsername(event.target.value);
         }}
       />
-      <label>Password:</label>
+      <label className="text-yellow-600 pl-8 pr-2">Password:</label>
       <input
         type="password"
         onChange={(event) => {
           setPassword(event.target.value);
         }}
       />
-
-      <button onClick={login}> Login </button>
+      <button
+        onClick={login}
+        className="ml-8 pl-5 pr-5 pt-2 pb-2 text-black bg-yellow-600"
+      >
+        {" "}
+        Login{" "}
+      </button>
     </div>
   );
 };

@@ -8,6 +8,7 @@ function Facts() {
   let navigate = useNavigate();
 
   useEffect(() => {
+    //fetch data from an API
     axios.get("http://localhost:3001/facts").then((response) => {
       setListOfPosts(response.data);
     });
@@ -19,13 +20,14 @@ function Facts() {
         "http://localhost:3001/likes",
         { factBoardId: factBoardId },
         { headers: { accessToken: localStorage.getItem("accessToken") } }
+        //this sends username back to table (nothing happens to table if user not logged in)
       )
       .then((response) => {
         history.go();
       });
   };
   return (
-    <div className=" w-full h-auto flex pw-10 flex-wrap">
+    <div className=" w-4/5 h-auto flex pw-10 flex-wrap">
       {listOfPosts.map((value, key) => {
         return (
           <div

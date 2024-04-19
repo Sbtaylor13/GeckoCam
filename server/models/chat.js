@@ -1,5 +1,4 @@
 module.exports = (sequelize, DataTypes) => {
-    
     const chat = sequelize.define("chat", {
         chatText:{
             type: DataTypes.STRING,
@@ -9,8 +8,6 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.STRING,
             allowNull: false,
         },
-
     })
-
     return chat
 }
