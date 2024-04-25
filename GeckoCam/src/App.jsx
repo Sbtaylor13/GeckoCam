@@ -11,13 +11,13 @@ const App = () => {
     <div>
       <Router>
         <div className="bg-black">
-          <Link to="/createfact" className="p-5 text-3xl text-yellow-600">
-            {" "}
-            Create Fact
-          </Link>
           <Link to="/" className="p-5 text-3xl text-yellow-600">
             {" "}
             Home
+          </Link>
+          <Link to="/createfact" className="p-5 text-3xl text-yellow-600">
+            {" "}
+            Create Fact
           </Link>
           <Link to="/login" className="p-5 text-3xl text-yellow-600">
             {" "}

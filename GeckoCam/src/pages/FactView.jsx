@@ -44,9 +44,6 @@ const FactView = () => {
           setComments([...comments, addedCom]);
           setNewComment("");
         }
-      })
-      .catch((error) => {
-        console.error("Error adding comment:", error);
       });
   };
 

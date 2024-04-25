@@ -1,6 +1,6 @@
 const express = require('express')
 const router = express.Router()
-const { fact_board, likes} = require('../models')
+const { fact_board, likes, comments} = require('../models')
 const { validateToken } = require("../middlewares/AuthMiddleware")
 
 /*
@@ -13,6 +13,11 @@ router.get('/', async (req, res) =>{
     const listOfPosts = await fact_board.findAll({include: [likes]}) //all elements in the column
     res.json(listOfPosts);
 })
+//SELECT * FROM fact_board INNER JOIN likes ON fact_board.id = comments.factBoardId;
+router.get('/comPerPost', async (req,res) =>{
+    const listOfPosts2 = await fact_board.findAll({include: [comments]})
+    res.json(listOfPosts2);
+})
 
 //SELECT * FROM fact_board WHERE id = :id;
 router.get('/byID/:id', async (req, res) => {
@@ -20,6 +25,7 @@ router.get('/byID/:id', async (req, res) => {
     const fact = await fact_board.findByPk(id);
     res.json(fact);
 })
+
 
 //INSERT INTO fact_board (...) VALUES (...);
 router.post("/", validateToken, async (req, res) =>{
