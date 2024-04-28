@@ -25,7 +25,7 @@ const Chat = () => {
   const addChat = async () => {
     try {
       if (newChat.trim() === "") {
-        setErrorMessage("Message must not be empty.");
+        setErrorMessage("No Empty Messages");
         return;
       }
 
@@ -38,10 +38,8 @@ const Chat = () => {
           headers: { accessToken: localStorage.getItem("accessToken") || "" },
         }
       );
-
-      // Ensure response.data contains the expected structure (including username)
       if (!response.data || !response.data.username) {
-        throw new Error("Invalid response data after sending chat message");
+        throw new Error("Bad Data");
       }
 
       const newChatMessage = {

@@ -14,6 +14,8 @@ module.exports = (sequelize, DataTypes) => {
         },
 
     });
+
+    //these add factBoardID columns to comments and likes tables
     fact_board.associate = (models) => {
         fact_board.hasMany(models.comments, {
             onDelete: "cascade", 
